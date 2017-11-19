@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+
+    <div class="col-sm-9">
+      <h2>{{title}}</h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Posted by {{authorName}}</h5>
+
+      <button *ngIf="isBlogAddedToFavs==false" type="button" class="btn btn-default btn-lg" (click)="addToFavs()">
+        <span class="glyphicon glyphicon-star"></span>{{buttonTitlte}}
+      </button>
+
+      <button *ngIf="isBlogAddedToFavs==true" type="button" class="btn btn-default btn-lg" (click)="removeFromFavs()">
+        <span class="glyphicon glyphicon-star"></span>{{buttonTitle2}}
+      </button>
+
+      <br><br><br><br>
+
+     <img *ngIf="blogType==2" src="../assets/management.jpg">
+      <img *ngIf="blogType==1" src="../assets/foodImage.jpg">
+      <img *ngIf="blogType==3" src="../assets/healthImage.jpg">
+      <img *ngIf="blogType==4" src="../assets/technology.jpg">
+
+      <div class="container" class="box">
+      <p>{{blogContent}}</p>
+      </div>
+
+
+      <br><br>
+    </div>
+
+
+    </div>
+    </div>
+</body>
+</html>

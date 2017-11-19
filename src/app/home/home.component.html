@@ -1,0 +1,32 @@
+<h2 style="font-weight:bold">ALL BLOGS</h2>
+
+<div class="row">
+  <div class="form-group" class="col s6">
+    <label>FILTER BY TYPE:</label>
+    <select style="width: 12cm;" class="form-control" [(ngModel)]="filterBy" name="filterBy" >
+      <option value="Technology">Technology</option>
+      <option value="Management">Management</option>
+      <option value="Food">Food</option>
+      <option value="Medical">Medical</option>
+    </select>
+
+    <button (click)="filter(filterBy)" *ngIf="isFilterOn===false">FILTER</button>
+    <button (click)="removeFilter()" *ngIf="isFilterOn===true">REMOVE FILTER</button>
+  </div>
+
+<div class="form-group" class="col s6">
+  <label>FILTER BY TITLE:</label>
+  <input type="text" name="filter" [(ngModel)]="titleFilter" (input)="performFilter(titleFilter)">
+
+</div>
+
+</div>
+
+
+
+<div *ngFor="let item of blogs">
+
+<app-blogcard [title]="item.title" [blogId]="item.id"></app-blogcard>
+
+
+</div>

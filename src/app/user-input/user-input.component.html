@@ -1,0 +1,39 @@
+<div class="row container">
+  <form class="col s12">
+
+    <div class="row">
+      <div class="input-field col s6">
+        <label style="font-weight:bold">TITLE</label>
+        :
+        <input [(ngModel)]="title" type="text" class="validate" name="title">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label style="font-weight:bold">Select Type:</label>
+      :
+      <select class="form-control" [(ngModel)]="type" name="type" >
+        <option value="Technology">Technology</option>
+        <option value="Management">Management</option>
+        <option value="Food">Food</option>
+        <option value="Medical">Medical</option>
+      </select>
+    </div>
+
+
+    <div class="row">
+      <div class="input-field col s12">
+        <label>Content</label>
+        :
+        <br>
+        <textarea name="content" cols="40" rows="20" [(ngModel)]="content"></textarea>
+      </div>
+    </div>
+
+    <button style="background-color:gold" (click)="submitBlog()">SUBMIT</button>
+
+
+  </form>
+</div>
+
+

@@ -1,0 +1,23 @@
+
+<nav class="card-panel  pink lighten-2">
+  <div class="nav-wrapper">
+    <div *ngIf="isTheUserLoggedIn()===true">
+    <button (click)="logout()" type="button" class="btn btn-primary btn-lg" style="float: right;">{{navTitle4}}</button>
+    </div>
+    <div *ngIf="isTheUserLoggedIn()===false">
+      <button routerLink="/login" type="button" class="btn btn-primary btn-lg" style="float: right;">{{navTitle3}}</button>
+    </div>
+
+
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><a routerLink="/home" >{{navTitle1}}</a></li>
+      <li><a routerLink="/about">{{navTitle2}}</a></li>
+      <li><a routerLink="/favourites" *ngIf="isTheUserLoggedIn()===true">{{navTitle5}}</a></li>
+    </ul>
+  </div>
+</nav>
+
+<br>
+<!--<button type="button" class="btn btn-primary btn-lg" style="float: right;" (click)="redirectToLogin()">LOGIN</button>-->
+
+<router-outlet></router-outlet>

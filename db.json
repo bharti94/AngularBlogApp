@@ -1,0 +1,64 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "type": "Technology",
+      "title": "How to be a good developer",
+      "author": "bharti",
+      "authorId": 1,
+      "content": "What successful developers have in common, is that they care about programming a lot, they are professionals treating good programming practices as a form of art."
+    },
+    {
+      "id": 2,
+      "type": "Food",
+      "title": "best places to eat in delhi",
+      "author": "dhruv",
+      "authorId": 3,
+      "content": "North campus,south campus,lajpat nagar have good cuisines.Delhi has always been one of the most preferred destination for food lovers. With its innumerable varieties and multiple cuisines along with delicious delicacies and exotic tastes, this city is a living legend from centuries."
+    },
+    {
+      "id": 3,
+      "type": "Health",
+      "content": "Add plenty of fruits and veggies, grains, and foods high in omega-3 fatty acids like fresh tuna or herring to your diet. .",
+      "authorId": 1,
+      "author": "bharti",
+      "title": "How to avoid heart attacks"
+    },
+    {
+      "id": 4,
+      "type": "Management",
+      "content": "Besides regularly publishing informative articles, Project Management Hut also features what they’ve termed as “huts”: collections of articles focusing on various aspects of project management.",
+      "authorId": 2,
+      "author": "reetik",
+      "title": "Project Management Hut"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "bharti",
+      "password": "bharti123",
+      "favourites": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "username": "reetik",
+      "password": "reetik123",
+      "favourites": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "username": "dhruv",
+      "password": "dhruv123",
+      "favourites": [
+        2,
+        4
+      ]
+    }
+  ]
+}
